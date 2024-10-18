@@ -1,0 +1,36 @@
+@font-face {
+	font-family: 'Red Hat Display';
+	src: url(../fonts/RedHatDisplay-Regular.ttf);
+	font-weight: 400;
+}
+@font-face {
+	font-family: 'Red Hat Display';
+	src: url(../fonts/RedHatDisplay-Medium.ttf);
+	font-weight: 500;
+}
+@font-face {
+	font-family: 'Red Hat Display';
+	src: url(../fonts/RedHatDisplay-SemiBold.ttf);
+	font-weight: 600;
+}
+@font-face {
+	font-family: 'Red Hat Display';
+	src: url(../fonts/RedHatDisplay-Bold.ttf);
+	font-weight: 700;
+}
+@font-face {
+	font-family: 'Red Hat Display';
+	src: url(../fonts/RedHatDisplay-ExtraBold.ttf);
+	font-weight: 800;
+}
+
+body{
+	font-family:'Red Hat Display', sans-serif ;
+	font-weight: 400;
+}
+.container{
+	max-width: 1120px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 20px;
+}
