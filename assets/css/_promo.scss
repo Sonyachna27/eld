@@ -1,0 +1,46 @@
+.promo{
+	background-color: $--black;
+	&__container{
+		padding: 140px 0;
+		display: flex;
+		justify-content: space-between;
+		background: url(../images/promo-img1.png) right center / contain no-repeat;
+	}
+	&__content{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		max-width: 360px;
+		width: 100%;
+		text-shadow: 2px 1px 1px #000000;
+		div{
+			color: $--white;
+			margin-bottom: 15px;
+			@include titleH3;
+		}
+		& p{
+			color:#BFC5C8;
+			margin-bottom: 50px;
+			@include p3;
+			text-shadow: 2px 1px 1px #000000;
+		}
+		&__links{
+			display: flex;
+			gap: 10px;
+			& a{
+				max-width: 177px;
+				width: 100%;
+				transition: .3s linear;
+				&:hover{
+					transform: translateY(-5px);
+				}
+				& img{
+					max-width: 100%;
+					width: 100%;
+					object-fit: cover;
+
+				}
+			}
+		}
+	}
+}

@@ -1,16 +1,23 @@
 .hero{
 	background-color: #141414;
 	position: relative;
-	
-
+margin-bottom: 120px;
+@media screen and (max-width:1023px) {
+	margin-bottom: 60px;
+}
 	&__container{
-		max-width: 1010px;
+		max-width: 1050px;
 		position: relative;
 		display: flex;
 		justify-content: space-between;
 		color: #fff;
 		align-items: center;
 		padding-top: 120px;
+		margin: 0 auto;
+		gap: 40px;
+		@media screen and (max-width:1023px) {
+			flex-direction: column;
+		}
 		&:after{
 			content: '';
 			max-width: 330px;
@@ -23,22 +30,85 @@
 			border-radius: 330px;
 			background: var(--Green, #39B751);
 			filter: blur(175px);
-			z-index: 1;
+			z-index: 0;
+			@media screen and (max-width:1023px) {
+				right: auto;
+			}
 		}
 	}
 	&__content{
 		max-width: 570px;
 		width: 100%;
+		display: flex;
+		flex-direction: column;
+		
+		& h1{
+			@include titleH1;
+			margin-bottom: 16px;
+		}
+		& p{
+			@include p1;
+			margin-bottom: 10px;
+			&:nth-last-of-type(1){
+				margin-bottom: 30px;
+			}
+		}
 	}
 	&__img{
 		width: 285px;
 		height: 580px;
 		margin-bottom: -50px;
 	}
+	&__count__container{
+		padding-top: 80px;
+		background-color: $--white;
+	}
+	&__count{
+		display: flex;
+		flex-direction: column;
+		padding: 40px 0;
+	@media screen and (min-width:1023.5px){
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+	}
+		&-item{
+			display: flex;
+			flex-direction: column;
+			gap: 5px;
+			align-items: center;
+			color: $--black;
+		
+				&:nth-of-type(2){
+				@media screen and (max-width:1023px) {
+					border-top: 1px solid #ADADAD;
+					border-bottom: 1px solid #ADADAD;
+				}
+					@media screen and (min-width:1023.5px) {
+						border-left: 1px solid #ADADAD;
+						border-right: 1px solid #ADADAD;
+					}
+			}
+			
+			@media screen and (max-width:1023px) {
+				padding: 40px;
+				
+			}
+			div{
+				@include titleH4;
+				color: $--black;
+			}
+			& div{
+				
+				& span{
+					color: $--green;
+					font-size: 42px;
+					font-style: normal;
+					font-weight: 800;
+					line-height: normal;
+				}
+			}
+		}
+
+	}
 }
-.test{
-	width: 1080px;
-	height: 1080px;
-	background-color: #39B751;
-	margin: 0 auto;
-}
+

@@ -23,14 +23,73 @@
 	src: url(../fonts/RedHatDisplay-ExtraBold.ttf);
 	font-weight: 800;
 }
-
+$--green:#39B751;
+$--white:#fff;
+$--black:#141414;
+$--silver: #F4F4F4;
+$--silver-2: #5F6B70;
+$--silver-3: #ADADAD;
+$--dark-blue: #091C23;
+$--gray-3: #8D909B;
+$--gray:#BFC5C8;
+html.open{
+	overflow: hidden;
+}
 body{
 	font-family:'Red Hat Display', sans-serif ;
 	font-weight: 400;
+	background-color: #E8E8E8;
 }
 .container{
-	max-width: 1120px;
+	max-width: 1340px;
 	width: 100%;
 	margin: 0 auto;
 	padding: 0 20px;
+}
+.container-s{
+	max-width: 1280px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+.container-xs{
+	max-width: 1200px;
+	width: 100%;
+	margin: 0 auto;
+padding: 0 20px;
+}
+.btn{
+	width: fit-content;
+	padding: 18px 38px;
+	background-color: $--green;
+	color: $--white;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+	border-radius: 6px;
+	border: 1px solid transparent;
+	transition: .3s linear;
+	&:hover{
+		background-color: transparent;
+		border-color: $--green;
+		color: $--green;
+		text-shadow: 2px 2px 18px rgba(255,255,255,0.7);
+	}
+}
+.mb-m{
+	margin-bottom: 140px;
+	@media screen and (max-width:767px) {
+		margin-bottom: 70px;
+	}
+}
+.center-title{
+	max-width: 640px;
+	width: 100%;
+	text-align: center;
+	margin: 0 auto;
+	margin-bottom: 50px;
+	& h2{
+		@include titleH2;
+	}
 }
