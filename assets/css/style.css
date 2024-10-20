@@ -878,6 +878,13 @@ body {
   font-weight: 400;
   line-height: normal;
 }
+.contact__form__wrap form .btn {
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+.contact__form__wrap form .btn:hover {
+  border-color: #39B751;
+}
 
 .choose__slider {
   position: relative;
@@ -1140,9 +1147,11 @@ body {
 .footer__item {
   max-width: 280px;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 .footer__item-title {
-  margin-bottom: 15px;
   font-size: 14px;
   font-style: normal;
   font-weight: 700;
@@ -1166,6 +1175,12 @@ body {
 }
 .footer__nav ul:not(.submenu) {
   gap: 40px;
+}
+.footer__nav ul li a {
+  transition: 0.3s linear;
+}
+.footer__nav ul li a:hover {
+  color: #091C23;
 }
 .footer__nav ul li:not(.submenu li) {
   display: flex;
@@ -1191,12 +1206,12 @@ body {
   font-weight: 400;
   line-height: normal;
 }
-.footer__contacts {
+.footer__contacts__wrap {
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
-.footer__contacts a, .footer__contacts div {
+.footer__contacts__wrap a, .footer__contacts__wrap div {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -1205,8 +1220,12 @@ body {
   font-weight: 400;
   line-height: normal;
   color: #5F6B70;
+  transition: 0.3s linear;
 }
-.footer__contacts a svg, .footer__contacts div svg {
+.footer__contacts__wrap a:hover, .footer__contacts__wrap div:hover {
+  color: #091C23;
+}
+.footer__contacts__wrap a svg, .footer__contacts__wrap div svg {
   min-width: 36px;
   aspect-ratio: 1;
   width: 36px;

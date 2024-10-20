@@ -112,10 +112,10 @@ const sliderFunction = () => {
   var chooseSwiper = new Swiper('.chooseSwiper', { // виправлено тут
     pagination: {
       el: ".choose-pagination",
+			clickable: true,
     },
     slidesPerView: 1,
     spaceBetween: 20,
-    // Responsive breakpoints
     breakpoints: {
       320: {
         slidesPerView: 1,

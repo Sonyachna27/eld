@@ -27,8 +27,11 @@
 	&__item{
 		max-width: 280px;
 		width: 100%;
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
 		&-title{
-			margin-bottom: 15px;
+		
 			font-size: 14px;
 			font-style: normal;
 			font-weight: 700;
@@ -50,20 +53,27 @@
 			}
 			&:not(.submenu){
 				gap: 40px;
-				
 			}
-			& li:not(.submenu li){
-				display: flex;
-				flex-direction: column;
-				gap: 30px;
-				max-width: 280px;
-				width: 100%;
-				& div{
-					font-size: 14px;
-					font-style: normal;
-					font-weight: 700;
-					line-height: normal;
-					color: $--dark-blue;
+			& li{
+				& a{
+					transition: .3s linear;
+					&:hover{
+						color: $--dark-blue;
+					}
+				}
+				&:not(.submenu li){
+					display: flex;
+					flex-direction: column;
+					gap: 30px;
+					max-width: 280px;
+					width: 100%;
+					& div{
+						font-size: 14px;
+						font-style: normal;
+						font-weight: 700;
+						line-height: normal;
+						color: $--dark-blue;
+					}
 				}
 			}
 			.submenu{
@@ -80,7 +90,8 @@
 		}
 	}
 	&__contacts{
-		display: flex;
+		&__wrap{
+			display: flex;
 		flex-direction: column;
 		gap: 15px;
 		& a,
@@ -93,12 +104,18 @@
 			font-weight: 400;
 			line-height: normal;
 			color: $--silver-2;
+			transition: .3s linear;
+				&:hover{
+					color: $--dark-blue;
+				}
+			
 			& svg{
 				min-width: 36px;
 				aspect-ratio: 1;
 				width: 36px;
 				height: 36px;
 			}
+		}
 		}
 	}
 	&__app{

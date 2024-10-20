@@ -144,6 +144,13 @@
 						line-height: normal;
 					}
 				}
+				& .btn{
+					cursor: pointer;
+					border: 1px solid transparent;
+					&:hover{
+						border-color: $--green;
+					}
+				}
 			}
 		}
 	}
