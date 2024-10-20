@@ -58,15 +58,20 @@ margin-bottom: 120px;
 		width: 285px;
 		height: 580px;
 		margin-bottom: -50px;
+		position: relative;
+		z-index: 2;
 	}
 	&__count__container{
 		padding-top: 80px;
 		background-color: $--white;
+		position: relative;
+		z-index: 1;
 	}
 	&__count{
 		display: flex;
 		flex-direction: column;
 		padding: 40px 0;
+		
 	@media screen and (min-width:1023.5px){
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);

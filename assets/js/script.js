@@ -1,6 +1,9 @@
 document.addEventListener("DOMContentLoaded", () =>{
 	openHeader();
 	windowLoad();
+	sliderFunction();
+	accordionFunction();
+	downloadFileOnClick();
 });
 
 const openHeader = () =>{
@@ -100,4 +103,39 @@ const downloadFileOnClick = () => {
 			link.click();
 		});
 	});
+};
+
+const sliderFunction = () => {
+  const sliderInit = document.querySelector('.chooseSwiper'); // виправлено тут
+  if (!sliderInit) return;
+
+  var chooseSwiper = new Swiper('.chooseSwiper', { // виправлено тут
+    pagination: {
+      el: ".choose-pagination",
+    },
+    slidesPerView: 1,
+    spaceBetween: 20,
+    // Responsive breakpoints
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+      },
+      640: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 3,
+      }
+    }
+  });
+}
+
+const accordionFunction = () => {
+  const accordionItems = document.querySelectorAll(".accord-item");
+  
+  accordionItems.forEach((item) => {
+    item.addEventListener("click", function () {
+        item.classList.toggle("active");
+    });
+  });
 };
