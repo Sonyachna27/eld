@@ -91,12 +91,13 @@
 				}
 				& input,
 				& textarea{
-					width: 100%;
+					
 					border: none;
 					outline: none;
 					
 					&:not([type="submit"]):not([type="checkbox"]){
 						padding: 20px 30px;
+						width: 100%;
 						background-color: $--silver;
 						border-radius: 6px;
 						color: $--dark-blue;
@@ -117,6 +118,7 @@
 					max-height: 14px;
 				}
 				& textarea{
+					width: 100%;
 					min-height: 150px;
 					resize: none;
 					border-radius: 6px;

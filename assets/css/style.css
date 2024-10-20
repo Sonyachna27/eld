@@ -821,12 +821,12 @@ body {
   width: 100%;
 }
 .contact__form__wrap form input, .contact__form__wrap form textarea {
-  width: 100%;
   border: none;
   outline: none;
 }
 .contact__form__wrap form input:not([type=submit]):not([type=checkbox]), .contact__form__wrap form textarea:not([type=submit]):not([type=checkbox]) {
   padding: 20px 30px;
+  width: 100%;
   background-color: #F4F4F4;
   border-radius: 6px;
   color: #091C23;
@@ -848,6 +848,7 @@ body {
   max-height: 14px;
 }
 .contact__form__wrap form textarea {
+  width: 100%;
   min-height: 150px;
   resize: none;
   border-radius: 6px;
