@@ -619,6 +619,11 @@ body {
   justify-content: space-between;
   background: url(../images/promo-img1.png) right center/contain no-repeat;
 }
+.promo-reverse .promo__container {
+  background: url(../images/promo-img2.png) left center/auto 600px no-repeat;
+  flex-direction: row-reverse;
+  padding: 108px 0 100px 0;
+}
 .promo__content {
   display: flex;
   flex-direction: column;
@@ -706,51 +711,6 @@ body {
 }
 .download__container .btn:hover svg path {
   fill: #39B751;
-}
-
-.promo-reverse {
-  background-color: #141414;
-}
-.promo-reverse__container {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column-reverse;
-  gap: 10px;
-}
-@media screen and (max-width: 767px) {
-  .promo-reverse__container {
-    align-items: center;
-  }
-}
-@media screen and (min-width: 767px) {
-  .promo-reverse__container {
-    flex-direction: row;
-  }
-}
-.promo-reverse__container .promo__content {
-  max-width: 460px;
-  width: 100%;
-  padding: 108px 0 100px;
-  text-shadow: none;
-}
-.promo-reverse__container img {
-  max-width: 600px;
-  width: 100%;
-  height: auto;
-  flex-grow: 1;
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 100%;
-}
-@media screen and (min-width: 767px) {
-  .promo-reverse__container img {
-    width: 51%;
-  }
-}
-@media screen and (max-width: 767px) {
-  .promo-reverse__container img {
-    aspect-ratio: 1;
-  }
 }
 
 .contact__links {
@@ -1146,5 +1106,164 @@ body {
 @media screen and (min-width: 768px) {
   .faq__item__bottom p {
     max-width: calc(100% - 88px);
+  }
+}
+
+.footer {
+  background-color: #fff;
+}
+.footer__top {
+  padding: 40px;
+}
+.footer__top .logo {
+  max-width: 320px;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+  margin: 0 auto;
+  width: 100%;
+  display: block;
+}
+.footer__list {
+  border-bottom: 1px solid #ADADAD;
+  border-top: 1px solid #ADADAD;
+  padding: 80px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+@media screen and (min-width: 1024px) {
+  .footer__list {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.footer__item {
+  max-width: 280px;
+  width: 100%;
+}
+.footer__item-title {
+  margin-bottom: 15px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  color: #091C23;
+}
+@media screen and (min-width: 1024px) {
+  .footer__nav {
+    width: 50%;
+  }
+}
+.footer__nav ul {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 1024px) {
+  .footer__nav ul {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.footer__nav ul:not(.submenu) {
+  gap: 40px;
+}
+.footer__nav ul li:not(.submenu li) {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 280px;
+  width: 100%;
+}
+.footer__nav ul li:not(.submenu li) div {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  color: #091C23;
+}
+.footer__nav ul .submenu {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: #5F6B70;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.footer__contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.footer__contacts a, .footer__contacts div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: #5F6B70;
+}
+.footer__contacts a svg, .footer__contacts div svg {
+  min-width: 36px;
+  aspect-ratio: 1;
+  width: 36px;
+  height: 36px;
+}
+.footer__app {
+  max-width: 172px;
+}
+.footer__app__links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 100%;
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.footer__app a {
+  transition: 0.3s linear;
+}
+@media (hover: hover) and (pointer: fine) {
+  .footer__app a:hover {
+    transform: translateY(-5px);
+  }
+}
+.footer__app a svg {
+  max-width: 100%;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+  width: 100%;
+  height: 100%;
+}
+.footer__copy {
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column-reverse;
+  gap: 20px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: #5F6B70;
+}
+@media screen and (min-width: 1024px) {
+  .footer__copy {
+    flex-direction: row;
+  }
+}
+.footer__copy .lumios {
+  display: flex;
+  gap: 15px;
+  flex-direction: column-reverse;
+}
+@media screen and (min-width: 1024px) {
+  .footer__copy .lumios {
+    flex-direction: row;
   }
 }/*# sourceMappingURL=style.css.map */
