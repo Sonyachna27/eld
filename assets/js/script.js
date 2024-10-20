@@ -41,7 +41,7 @@ function windowLoad() {
 				}
 			}
 		})
-	}, { threshold: 0.3 });
+	}, { threshold: 0.7});
 
 	let sections = document.querySelectorAll('.about__container-bottom-item');
 	if (sections.length) {
