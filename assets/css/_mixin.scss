@@ -7,6 +7,9 @@
 		font: inherit;
 		font-weight: 800;
 	}
+	@media screen and (max-width:767px) {
+		font-size: 30px;
+	}
 }
 @mixin titleH2{
 	font-size: 42px;
@@ -17,18 +20,27 @@ line-height: normal;
 	font: inherit;
 	font-weight: 700;
 }
+@media screen and (max-width:767px) {
+	font-size: 26px;
+}
 }
 @mixin titleH3{
 		font-size: 32px;
 	font-style: normal;
 	font-weight: 700;
 	line-height: normal;
+	@media screen and (max-width:767px) {
+		font-size: 22px;
+	}
 }
 @mixin titleH4{
 	font-size: 20px;
 font-style: normal;
 font-weight: 600;
 line-height: normal;
+@media screen and (max-width:767px) {
+	font-size: 19px;
+}
 }
 @mixin p1{
 		font-size: 16px;
