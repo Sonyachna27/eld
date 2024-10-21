@@ -1,15 +1,25 @@
 .promo{
 	background-color: $--black;
 	&__container{
-		padding: 140px 0;
 		display: flex;
 		justify-content: space-between;
-		background: url(../images/promo-img1.png) right center / contain no-repeat;
-.promo-reverse & {
-	background: url(../images/promo-img2.png) left center / auto 600px no-repeat;
-flex-direction: row-reverse;
-padding: 108px 0 100px 0;
-}
+		flex-direction: column-reverse;
+		gap: 40px;
+		
+		padding: 65px 0 70px 0;
+		.promo-reverse &{
+			flex-direction: column;
+			padding: 20px 0 40px;
+		}
+		@media screen and (min-width:768px) {
+			flex-direction: row;
+			padding: 0;
+			
+		}
+		@media screen and (max-width:767px) {
+			align-items: center;
+		}
+		
 	}
 	&__content{
 		display: flex;
@@ -17,7 +27,10 @@ padding: 108px 0 100px 0;
 		justify-content: center;
 		max-width: 360px;
 		width: 100%;
-		text-shadow: 2px 1px 1px #000000;
+		justify-content: center;
+	@media screen and (min-width:768px){
+		padding: 40px 0;
+	}
 		.promo-reverse & {
 			max-width: 460px;
 			& p{
@@ -31,11 +44,13 @@ padding: 108px 0 100px 0;
 			color: $--white;
 			margin-bottom: 15px;
 			@include titleH3;
+			text-shadow: 2px 1px 1px #000000;
 		}
 		& p{
 			color:#BFC5C8;
 			margin-bottom: 50px;
 			@include p3;
+			text-shadow: 2px 1px 1px #000000;
 			text-shadow: 2px 1px 1px #000000;
 		}
 		&__links{
@@ -55,6 +70,22 @@ padding: 108px 0 100px 0;
 
 				}
 			}
+		}
+		& .btn{
+			@media screen and (max-width:767px) {
+			max-width: 100%;
+			width: 100%;
+			text-align: center;
+			}
+		}
+		
+	}
+	&__img{
+		width: 100%;
+		@media screen and (min-width:767px) {
+			width: 51%;
+			height: auto;
+			object-fit: cover;
 		}
 	}
 }
@@ -83,51 +114,7 @@ padding: 108px 0 100px 0;
 			align-items: center;
 			justify-content: space-between;
 			gap: 10px;
-			& svg path{
-				transition: .3s linear;
-
-			}
-			&:hover{
-				& svg path{
-					fill:$--green;
-				}
-			}
 		}
 	}
 	
 }
-// .promo-reverse {
-// 	background-color: $--black;
-// 	&__container{
-// 		display: flex;
-// 		justify-content: space-between;
-// 		flex-direction: column-reverse;
-// 		gap: 10px;
-// 		@media screen and (max-width:767px) {
-// 			align-items: center;
-// 		}
-// 		@media screen and (min-width:767px) {
-// 			flex-direction: row;
-// 		}
-// 		& .promo__content{
-// 			max-width: 460px;
-// 			width: 100%;
-// 			padding: 108px 0 100px;
-// 			text-shadow: none;
-// 		}
-// 		& img{
-// 			max-width: 600px;
-// 			width: 100%;
-// 			height: auto;
-// 			flex-grow: 1;
-// 			object-fit: cover;
-// 			width: 100%;
-// 			@media screen and (min-width:767px) {
-// 				width: 51%;
-// 			}
-// 			@media screen and (max-width:767px) {
-// 				aspect-ratio: 1;
-// 			}
-// 		}
-// 	}
-// }

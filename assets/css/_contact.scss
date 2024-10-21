@@ -96,7 +96,7 @@
 					outline: none;
 					
 					&:not([type="submit"]):not([type="checkbox"]){
-						padding: 20px 30px;
+						padding: 18px 28px;
 						width: 100%;
 						background-color: $--silver;
 						border-radius: 6px;
@@ -105,10 +105,13 @@
 						font-style: normal;
 						font-weight: 400;
 						line-height: normal;
+						border: 1px solid transparent;
+						&:focus{
+							border: 1px solid $--silver-3;
+						}
 						&::placeholder{
 							color: $--silver-2;
 							opacity: 1;
-							
 						}
 					}
 					
@@ -149,6 +152,7 @@
 				& .btn{
 					cursor: pointer;
 					border: 1px solid transparent;
+					width: 100%;
 					&:hover{
 						border-color: $--green;
 					}
