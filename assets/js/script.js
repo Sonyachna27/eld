@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () =>{
 	accordionFunction();
 	downloadFileOnClick();
 	smooth();
+	animateSectionPosition();
 });
 
 const openHeader = () =>{
@@ -160,4 +161,32 @@ const smooth = () =>{
 				});
 		});
 	});
+}
+
+const animateSectionPosition = () =>{
+	const sections = document.querySelectorAll(".sectionScroll");
+	if(!sections) return;
+	const options = {
+		root: document,
+		rootMargin: "0px",
+		threshold: 0.1,
+	};
+
+	const callback = function (entries, observer) {
+		entries.forEach((entry) => {
+			if (entry.isIntersecting && !entry.target.classList.contains("animate")) {
+				entry.target.classList.add("animate");
+			} else if (
+				!entry.isIntersecting &&
+				entry.target.classList.contains("animate")
+			) {
+				entry.target.classList.remove("animate");
+			}
+		});
+	};
+
+	const observer = new IntersectionObserver(callback, options);
+
+	sections.forEach((section) => observer.observe(section));
+
 }

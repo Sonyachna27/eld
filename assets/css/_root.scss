@@ -96,3 +96,31 @@ padding: 0 20px;
 		@include titleH2;
 	}
 }
+.sectionScroll {
+  opacity: 0;
+  visibility: hidden;
+  // transform: translate(0px, 50px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.animate {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(0px, 0px);
+  animation: example 1s;
+}
+
+@keyframes example {
+  from {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(var(--startScrollTop, 150px));
+   
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(calc(var(--scrollTop) / 10));
+  
+  }
+}
