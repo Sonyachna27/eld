@@ -179,11 +179,9 @@
 		.lumios{
 			display: flex;
 			gap: 15px;
-			flex-direction: column-reverse;
 			align-items: center;
-			@media screen and (min-width:1024px) {
 				flex-direction: row;
-			}
+			
 		}
 	}
 }

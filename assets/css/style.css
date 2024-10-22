@@ -181,6 +181,11 @@ body {
     font-size: 26px;
   }
 }
+@media screen and (max-width: 1023px) {
+  .center-title {
+    margin-bottom: 30px;
+  }
+}
 
 .sectionScroll {
   opacity: 0;
@@ -338,8 +343,8 @@ body {
   flex-direction: column;
   border-radius: 6px;
   gap: 10px;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   background-color: #39B751;
   padding: 10px;
 }
@@ -356,21 +361,15 @@ body {
   transform: translate(0%);
 }
 .open .burger span:nth-of-type(1) {
-  transform: translate(-1px, 4px) rotate(360deg) rotate(45deg) scale(1.05);
+  transform: translate(0px, 6px) rotate(360deg) rotate(45deg);
 }
 .open .burger span:nth-of-type(2) {
-  transform: translate(-1px, -7px) rotate(360deg) rotate(-45deg) scale(1.05);
+  transform: translate(0px, -6px) rotate(360deg) rotate(-45deg);
 }
 
 .hero {
   background-color: #141414;
   position: relative;
-  margin-bottom: 120px;
-}
-@media screen and (max-width: 1023px) {
-  .hero {
-    margin-bottom: 60px;
-  }
 }
 .hero__container {
   max-width: 1050px;
@@ -378,7 +377,6 @@ body {
   display: flex;
   justify-content: space-between;
   color: #fff;
-  align-items: center;
   padding-top: 120px;
   margin: 0 auto;
   gap: 40px;
@@ -386,6 +384,7 @@ body {
 @media screen and (max-width: 1023px) {
   .hero__container {
     flex-direction: column;
+    align-items: center;
   }
 }
 .hero__container:after {
@@ -413,6 +412,7 @@ body {
   width: 100%;
   display: flex;
   flex-direction: column;
+  padding-top: 32px;
 }
 .hero__content h1 {
   font-size: 48px;
@@ -445,6 +445,17 @@ body {
 .hero__content .btn {
   max-width: 240px;
   width: 100%;
+}
+@media screen and (max-width: 767px) {
+  .hero__content .btn {
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .hero__content {
+    align-items: center;
+    text-align: center;
+  }
 }
 .hero__img {
   width: 285px;
@@ -1443,11 +1454,6 @@ body {
 .footer__copy .lumios {
   display: flex;
   gap: 15px;
-  flex-direction: column-reverse;
   align-items: center;
-}
-@media screen and (min-width: 1024px) {
-  .footer__copy .lumios {
-    flex-direction: row;
-  }
+  flex-direction: row;
 }/*# sourceMappingURL=style.css.map */
